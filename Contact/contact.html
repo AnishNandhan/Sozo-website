@@ -216,20 +216,23 @@
     text-align: center; /* Optional: center the text within the h4 if needed */
   }
   @media only screen and (max-width: 800px) {
-
+    .contact {
+      overflow-x: hidden;
+    }
     .blue2 {
-    width: 300px;
-    height: 300px;
-  }
+      width: 200px;
+      height: 200px;
+      filter: blur(50.1875px);
+    }
 
     .contact h1 {
-    font-size: 30px;
-  }
-  .contact h4 {
-    font-size: 18px;
-    width: 80%;
-    margin: 0 auto;
-  }
+      font-size: 30px;
+    }
+    .contact h4 {
+      font-size: 18px;
+      width: 80%;
+      margin: 0 auto;
+    }
     .accordion__wrapper {
       width: 80%;
     }
@@ -246,65 +249,63 @@
       font-size: 15px;
     }
 
-    
-  .sides {
-    width: 90%;
-    height: fit-content;
-  }
+    .sides {
+      width: 90%;
+      height: fit-content;
+    }
 
-  .side {
-    width: 100%;
-    padding: 15px;
-  }
+    .side {
+      width: 100%;
+      padding: 15px;
+    }
 
-  .side .imgbox::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      360deg,
-      rgba(10, 13, 23, 0.9) 20.4%,
-      rgba(10, 13, 23, 0) 100%
-    ); /* Adjust the gradient colors as needed */
-    border-radius: 12px;
-  }
+    .side .imgbox::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        360deg,
+        rgba(10, 13, 23, 0.9) 20.4%,
+        rgba(10, 13, 23, 0) 100%
+      ); /* Adjust the gradient colors as needed */
+      border-radius: 12px;
+    }
 
-  .form-group input[type="text"],
-  .form-group input[type="email"],
-  .form-group textarea {
-    font-size: 14px;
-  }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+      font-size: 14px;
+    }
 
-  .form-group textarea {
-    resize: vertical;
-    height: 80px;
-  }
-  .form-group button {
-    padding: 5px auto;
-    font-size: 14px;
-  }
-  .form-group button:hover {
-    background-color: #0056b3;
-  }
+    .form-group textarea {
+      resize: vertical;
+      height: 80px;
+    }
+    .form-group button {
+      padding: 5px auto;
+      font-size: 14px;
+    }
+    .form-group button:hover {
+      background-color: #0056b3;
+    }
 
-  .side2 {
-    display: none;
-  }
-  .side1 h2 {
-    font-size: 20px;
-    line-height: 2;
-  }
-  .side1 h3 {
-    font-size: 16px;
-    font-weight: 200;
-  }
-  #contactForm {
-    margin-top: 20px;
-  }
-
+    .side2 {
+      display: none;
+    }
+    .side1 h2 {
+      font-size: 20px;
+      line-height: 2;
+    }
+    .side1 h3 {
+      font-size: 16px;
+      font-weight: 200;
+    }
+    #contactForm {
+      margin-top: 20px;
+    }
   }
 </style>
 
