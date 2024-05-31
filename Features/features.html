@@ -39,8 +39,9 @@
   .blurb {
     position: absolute;
     z-index: -1;
-    width: 100%;
-    left: -5%;
+    width: 55%;
+    left: 50%;
+    transform: translateX(-55%);
     height: auto;
   }
 
@@ -50,6 +51,7 @@
     height: auto;
     width: 90%;
     margin: 80px auto;
+    position: relative;
 }
 #how .blocks{
   display: flex;
@@ -107,13 +109,7 @@ background: radial-gradient(127.01% 102.92% at 50% 0%, rgba(255, 255, 255, 0.03)
   font-size: 48px;
 }
 
-.green{
-  position: absolute;
-    z-index: -1;
-    margin: 0 auto;
-    padding: 0;
-    width: 50%;
-}
+
 .proso{
   margin: 0 auto;
   margin-top: 80px;
@@ -148,6 +144,9 @@ background: radial-gradient(127.01% 102.92% at 50% 0%, rgba(255, 255, 255, 0.03)
   display: none;
   }
 @media only screen and (max-width: 800px) {
+  .blurb {
+    width: 100%;
+  }
   .f1, .f2{
   width: 50%;
 }
@@ -254,6 +253,20 @@ justify-content: space-around;
 
 }
 
+.green1 {
+  position: absolute;
+    z-index: -1;
+    width: 250px;
+    height: 250px;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 100%;
+background: linear-gradient(180deg, #2C4982 0%, #2CD095 100%);
+filter: blur(60px);
+  }
+
+
 </style>
 <div class="proso" id="proso"><img src="proso.png"/></div>
 
@@ -293,8 +306,9 @@ justify-content: space-around;
   </div>
   
 </div>
-<img class="green" src="green.png"/>
+
 <div id="how">
+  <div class="green1"></div>
   <div class="blocks">
     
     <div class="block">
