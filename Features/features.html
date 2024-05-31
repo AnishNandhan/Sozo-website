@@ -144,11 +144,10 @@ background: radial-gradient(127.01% 102.92% at 50% 0%, rgba(255, 255, 255, 0.03)
     width: 50%;
 }
 .proso{
-  align-items: center;
-  justify-content: center;
   margin: 0 auto;
-  display: flex;
   margin-top: 80px;
+  text-align: center;
+  width: 100%;
 }
 .proso img{
   width: 70%;
@@ -182,8 +181,14 @@ background: radial-gradient(127.01% 102.92% at 50% 0%, rgba(255, 255, 255, 0.03)
   justify-content: space-evenly; 
   align-items: center;
 }
-
+.uix {
+  display: none;
+  }
 @media only screen and (max-width: 800px) {
+  .f1, .f2{
+  width: 50%;
+}
+
   #how .blocks ul{
   padding:0 5px;
   padding-bottom: 5px;
@@ -192,8 +197,8 @@ background: radial-gradient(127.01% 102.92% at 50% 0%, rgba(255, 255, 255, 0.03)
     width: 90%;
 }
   .proso{
-  padding: 0 3px;
-  margin-top: 50px;
+  padding: 0;
+  margin-top: 0;
 }
   .proso img{
   width: 100%;
@@ -204,6 +209,7 @@ background: radial-gradient(127.01% 102.92% at 50% 0%, rgba(255, 255, 255, 0.03)
 #features .blocks {
     width: 100%;
     margin-top: 20px;
+    flex-direction: column;
   }
 #features h2 {
     font-size: 30px;
@@ -211,18 +217,32 @@ background: radial-gradient(127.01% 102.92% at 50% 0%, rgba(255, 255, 255, 0.03)
 
   #features .block {
     padding: 0;
+flex-direction: row;
+justify-content: space-around;
+
   }
   #features .block p {
     font-size: 14px;
-    width: 95%;
+    font-weight: 500;
     margin: 0 auto;
+
+
   }
   .block .ui {
     width: 150px;
+    display: none;
+  }
+  .uix {
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+    display: block;
+  }
+  .uix img{
+    width: 50%;
   }
   .blurb {
     width: 100%;
-    left: 45%;
   }
   .f1 img, .f2 img{
   width: 30px;
@@ -316,7 +336,10 @@ background: radial-gradient(127.01% 102.92% at 50% 0%, rgba(255, 255, 255, 0.03)
 <div id="features">
   <h2>Our Features</h2>
 
+
+ <div class="uix"> <img src="ui.png" alt="UI Image" /></div>
   <div class="blocks">
+    
     <div class="block">
       <div class="f1">
         <img src="but1.png">
@@ -327,6 +350,7 @@ background: radial-gradient(127.01% 102.92% at 50% 0%, rgba(255, 255, 255, 0.03)
         <p>Social Scoring<br />& Monetization</p>
       </div>
     </div>
+    
     <div class="block">
       <img class="ui" src="ui.png" alt="UI Image" />
     </div>
@@ -341,6 +365,7 @@ background: radial-gradient(127.01% 102.92% at 50% 0%, rgba(255, 255, 255, 0.03)
       </div>
     </div>
   </div>
+  
 </div>
 <img class="green" src="green.png"/>
 <div id="how">
@@ -404,9 +429,7 @@ background: radial-gradient(127.01% 102.92% at 50% 0%, rgba(255, 255, 255, 0.03)
     Security & Scalability</h2>
   <h3>With Sozo's blend of ICP and Social Scoring, we armor your NFT realm 
     with unbreakable security and boundless scalability, empowering 
-    creators and collectors alike to conquer.<br><br>
-    Low latency and high throughput of the World Computer enables web-2
-like performance which is not found in contemporary dApps(on ethereum).
+    creators and collectors alike to conquer.
   </h3>
 </div>
 <div>
