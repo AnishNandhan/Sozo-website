@@ -1,0 +1,414 @@
+<style>
+  #features {
+    color: #ffffff;
+    z-index: 1;
+    width: 100%;
+    margin-top: 20px;
+  }
+  #features h2 {
+    font-family: Outfit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 78px;
+    align-items: center;
+    text-align: center;
+  }
+  #features .blocks {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  #features .block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+  #features .block p {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Outfit;
+  }
+  .block img {
+    width: 472px;
+    height: auto;
+  }
+  .blurb {
+    position: absolute;
+    z-index: -1;
+    width: 60%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    left: 45%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+  }
+
+#how{
+  color: #ffffff;
+    z-index: 1;
+    height: auto;
+    width: 90%;
+    margin: 80px auto;
+}
+#how .blocks{
+  display: flex;
+  justify-content: space-between;
+}
+#how .blocks .block{
+  width: auto;
+}
+#how .blocks .span{
+  border-radius: 20px;
+  border: solid rgba(99, 99, 99, 0.315) 1px;
+  margin: 20px 0 0 20px;
+  width: 400px;
+  height: 280px;
+  padding:0 20px;
+  backdrop-filter: blur(10px);
+background: radial-gradient(127.01% 102.92% at 50% 0%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.08) 100%);
+}
+
+#how .blocks .span p{
+  font-size: 20px;
+  font-family: Outfit;
+}
+
+#how .blocks ul{
+    list-style: none;
+    font-size: 18px;
+    display: flex;
+    padding: 0;
+    list-style: none;
+    flex-direction: row;
+    justify-content:left;
+    align-items: center;
+    font-family: Outfit;
+    flex: 1;
+    text-align: left;
+
+}
+#how .blocks ul li{
+  margin-right: 10px;
+  padding: 0;
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+
+}
+#how .blocks .block h2{
+  text-align: left;
+  font-size: 82px;
+  margin-top: 50px;
+  font-family: Outfit;
+}
+#how .blocks .block h1{
+  font-weight: bold;
+  font-size: 48px;
+}
+.tech{
+  border-radius: 20px;
+  border: solid rgba(99, 99, 99, 0.315) 1px;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  height: 400px;
+  padding-left:20px;
+  background: radial-gradient(rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.08) 100%);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+.tech h2{
+  font-family: Outfit;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.tech h3{
+  font-family: Outfit;
+  font-size: 20px;
+  font-weight: lighter;
+}
+.green{
+  position: absolute;
+    z-index: -1;
+    margin: 0 auto;
+    padding: 0;
+    width: 50%;
+}
+.proso{
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 80px;
+}
+.proso img{
+  width: 70%;
+  pointer-events:none;
+}
+.tech span{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: Outfit;
+  color: #56C2FF;
+}
+.tech span h4{margin-left: 10px;}
+
+.f1, .f2{
+  margin-bottom: 5px;
+}
+
+.f1 img, .f2 img{
+  width: 70px;
+}
+
+#how .blocks ul{
+  border-bottom: solid rgba(99, 99, 99, 0.315) 1px;
+  padding:0 10px;
+  padding-bottom: 10px;
+}
+
+.block2{
+  display: flex; 
+  justify-content: space-evenly; 
+  align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .green{
+    width: 90%;
+}
+  .proso{
+  padding: 0 3px;
+  margin-top: 50px;
+}
+  .proso img{
+  width: 100%;
+}
+
+#features .blocks {
+    width: 100%;
+    margin-top: 20px;
+  }
+#features h2 {
+    font-size: 40px;
+  }
+
+  #features .block {
+    padding: 0;
+  }
+  #features .block p {
+    font-size: 14px;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .block .ui {
+    width: 210px;
+  }
+  .ui{
+    width: 50%;
+  }
+  .blurb {
+    width: 100%;
+    left: 45%;
+  }
+  .f1 img, .f2 img{
+  width: 30px;
+}
+
+#how{
+  margin: 50px auto;
+  width: 100%;
+}
+#how .blocks{
+  display: block;
+}
+
+#how .blocks .block2{
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#how .blocks .block2 .block{
+  width: 100%;
+
+}
+#how .blocks .span{
+  margin: 10px auto;
+  border-radius: 10px;
+  width: 95%;
+  height: 200px;
+  padding: 0 10px;
+}
+
+#how .blocks .span p{
+  font-size: 14px;
+}
+
+#how .blocks ul li{
+  font-size: 16px;
+}
+#how .blocks .block h2{
+  text-align: center;
+  font-size: 40px;
+}
+#how .blocks .block h1{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.tech{
+  border-radius: 20px;
+  border: solid rgba(99, 99, 99, 0.315) 1px;
+  margin: 0 auto;
+  width: 95%;
+  display: block;
+  justify-content:space-between;
+  align-items: center;
+  position: relative;
+  height: fit-content;
+  padding-left:20px;
+  background: radial-gradient(rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.08) 100%);
+  backdrop-filter: blur(10px);
+  color: white;
+  margin-bottom: 50px;
+  padding: 15px;
+}
+.tech img{
+  position: absolute;
+  height: auto;
+  right: 0;
+  top: 0;
+  opacity: 0.3;
+  width: 40%;
+  z-index: -1;
+}
+.tech h2{
+  font-family: Outfit;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.tech h3{
+  font-family: Outfit;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+}
+
+</style>
+<div class="proso" id="proso"><img src="proso.png"/></div>
+<img class="blurb"src="blur.png" />
+<div id="features">
+  <h2>Our Features</h2>
+
+  <div class="blocks">
+    <div class="block">
+      <div class="f1">
+        <img src="but1.png">
+        <p>Informed Marketplace</p>
+      </div>
+      <div class="f2">
+        <img src="but1.png">
+        <p>Social Scoring<br />& Monetization</p>
+      </div>
+    </div>
+    <div class="block">
+      <img class="ui" src="ui.png" alt="UI Image" />
+    </div>
+    <div class="block">
+      <div class="f1">
+        <img src="but1.png">
+        <p>Revenue<br />Generation</p>
+      </div>
+      <div class="f2">
+        <img src="but1.png">
+        <p>Seamless Onboarding<br />with ICP</p>
+      </div>
+    </div>
+  </div>
+</div>
+<img class="green" src="green.png"/>
+<div id="how">
+  <div class="blocks">
+    
+    <div class="block">
+      <h2>How are we doing it?</h2>
+    </div>
+    <div class="block2">
+    <div class="block">
+      <div class="span">
+        <ul>
+          <li><h1>01</h></li>
+        <li>Social Scoring</li>
+      </ul>
+        <p>Users can like or dislike NFTs that have been posted by other users, which
+          determines the “social score” of that NFT, which sets the base price for
+          NFT sale and the super-like fee.</p>
+      </div>
+      <div class="span">
+        <ul>
+          <li><h1>03</h></li>
+        <li>Community-Centric</li>
+      </ul>
+        <p>Social media aspect of the app, incorporating commenting,DMs and
+          following other users, promotes community building</p>
+      </div>
+    </div>
+    <div class="block">
+      <div class="span">
+        <ul>
+          <li><h1>02</h></li>
+        <li>NFT Rewards</li>
+      </ul>
+        <p>Users can earn revenue by posting their NFTs and incentivizing other
+          users to super-like for which they get rewards.</p>
+      </div>
+      <div class="span">
+        <ul>
+          <li><h1>04</h></li>
+        <li>Social Score Pricing</li>
+      </ul>
+        <p>In the NFT marketplace, the listing price of the NFT is set based upon its
+          social score, giving buyers and bidders confidence in their purchase
+          decision.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class="tech">
+<div>
+  <span>
+  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7.625 4.625H6.125C5.72718 4.625 5.34564 4.78304 5.06434 5.06434C4.78304 5.34564 4.625 5.72718 4.625 6.125V7.625M7.625 4.625V1.625M7.625 4.625H14.375M4.625 7.625V14.375M4.625 7.625H1.625M14.375 4.625H15.875C16.2728 4.625 16.6544 4.78304 16.9357 5.06434C17.217 5.34564 17.375 5.72718 17.375 6.125V7.625M14.375 4.625V1.625M17.375 7.625H20.375M17.375 7.625V14.375M7.625 20.375V17.375M14.375 20.375V17.375M17.375 14.375V15.875C17.375 16.2728 17.217 16.6544 16.9357 16.9357C16.6544 17.217 16.2728 17.375 15.875 17.375H6.125C5.72718 17.375 5.34564 17.217 5.06434 16.9357C4.78304 16.6544 4.625 16.2728 4.625 15.875V14.375M17.375 14.375H20.375M4.625 14.375H1.625" stroke="#56C2FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>    
+  <h4>Tech Stack</h4>
+</span>
+  <h2>Built on the Blockchain for Unmatched
+    Security & Scalability</h2>
+  <h3>With Sozo's blend of ICP and Social Scoring, we armor your NFT realm 
+    with unbreakable security and boundless scalability, empowering 
+    creators and collectors alike to conquer.<br><br>
+    Low latency and high throughput of the World Computer enables web-2
+like performance which is not found in contemporary dApps(on ethereum).
+  </h3>
+</div>
+<div>
+  <img src="icp.png">
+</div>
+</div>
+
+

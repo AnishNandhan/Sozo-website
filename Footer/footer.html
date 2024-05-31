@@ -1,0 +1,143 @@
+<style>
+  .footer a {
+    color: #fff;
+  }
+
+  .footer ul li {
+    list-style: none;
+    color: #fff;
+  }
+
+  .footer {
+    position: relative;
+    width: 100%;
+    font-family: Outfit;
+    border-top: solid #321e5f 0.5px;
+  }
+  .footer .content{
+    z-index: 1;
+  }
+
+  .footer .content .container {
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+
+  .content h2 {
+    margin-bottom: 0.25rem;
+    font-size: 2.25rem;
+  }
+
+  .footer__links {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+  }
+
+  .footer__links a {
+    position: relative;
+    text-align: center;
+    display: block;
+    align-items: center;
+    padding: 0 30px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .social {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+  }
+
+  .social a {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .social a img{
+    cursor: pointer;
+    width: 25px;
+  }
+
+  .footer__title img {
+    width: 160px;
+    margin-right: 50px;
+  }
+
+  .footer__copy {
+    border-top: solid #321e5f 0.1px;
+    text-align: center;
+    width: 90%;
+    font-size: 15px;
+    color: #dcdcdc;
+    padding: 20px 0;
+    margin: 0 auto;
+  }
+  .green2{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    width: 60%;
+}
+@media only screen and (max-width: 800px) {
+  .footer__links{
+    display: none;
+  }
+  .green2{
+    width: 80%;
+}
+.footer__title img {
+    width: 100px;
+    margin-right: 0;
+  }
+  .social a img{
+    width: 18px;
+  }
+  .footer .content .container {
+    padding: 10px 0;
+  }
+  .footer__copy {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}
+</style>
+
+  <div class="footer" id="footer-section">
+
+    <div class="content">
+      <div class="container">
+        <div
+          style="
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+          "
+        >
+          <div class="footer__title"><img src="logo.png" /></div>
+          
+          <ul class="footer__links">
+            <li><a href="#">About</a></li>
+            <li><a href="#about">Features</a></li>
+            <li><a href="#contact">Vision</a></li>
+          </ul>
+        </div>
+        <ul class="social">
+          <li><a href="#contact"><img src="w.svg"></a></li>
+          <li><a href="#contact"><img src="x.svg"></a></li>
+          <li><a href="#contact"><img src="l.svg"></a></li>
+        </ul>
+      </div>
+      
+      <p class="footer__copy">@ 2024 SoZo All Rights Reserved</p>
+    </div>
+    <img class="green2" src="green2.png"/>
+  </div>
+
