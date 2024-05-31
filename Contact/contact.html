@@ -19,7 +19,7 @@
     font-weight: 400;
   }
 
-  .blue2 {
+  .blue2, .blue4 {
     position: absolute;
     z-index: -1;
     width: 500px;
@@ -30,7 +30,7 @@
     background-color: #763af5;
     filter: blur(100.1875px);
   }
-  .touch .blue2 {
+  .blue4 {
     left: 0;
     top: 0;
     background: linear-gradient(
@@ -74,6 +74,7 @@
     font-size: 22px;
     font-weight: 400;
     font-family: Outfit;
+    margin-right: 10px;
   }
 
   .answer {
@@ -219,10 +220,13 @@
     .contact {
       overflow-x: hidden;
     }
-    .blue2 {
+    .blue2, .blue4 {
       width: 200px;
       height: 200px;
       filter: blur(50.1875px);
+    }
+    .blue4{
+      top: 20px;
     }
 
     .contact h1 {
@@ -234,15 +238,16 @@
       margin: 0 auto;
     }
     .accordion__wrapper {
-      width: 80%;
+      width: 85%;
     }
 
     .question {
-      padding: 10px;
+      padding: 0 8px;
     }
 
     .question p {
       font-size: 14px;
+      margin: 8px 0;
     }
 
     .question h3 {
@@ -311,7 +316,7 @@
 
 <div class="contact">
   <div class="touch" id="touch">
-    <div class="blue2"></div>
+    <div class="blue4"></div>
     <h1>Get in touch</h1>
     <h4>
       Fill out the given form and we'll get back to you s soon as possible!
