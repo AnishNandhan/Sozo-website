@@ -174,6 +174,20 @@
   object-fit: cover;
 }
 @media only screen and (max-width: 800px) {
+  .play {
+    position: absolute;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    left: calc(50% - 80px / 2 + 0.13px);
+    align-items: center;
+    justify-content: center;
+    top: calc(50% - 80px / 2 + 0.13px);
+    display: flex;
+    padding: 10px 0;
+    background-color: rgba(240, 255, 255, 0.13);
+    z-index: 10;
+  }
   .video{
     height: 250px;
     border-radius: 10px;
@@ -240,8 +254,7 @@
   <div class="video" id="about">
     <div class="play"  onclick="playVideo()">
       <svg
-        width="63"
-        height="70"
+        height="40"
         viewBox="0 0 63 70"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
