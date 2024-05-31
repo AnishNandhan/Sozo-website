@@ -1,11 +1,16 @@
 <style>
+  .teams{
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+  }
   .team {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    margin-top: 40px;
     width: 90%;
     height: 400px;
-    margin: 80px;
     position: relative;
   }
   .team .title {
@@ -86,7 +91,45 @@
     background-color: #763af5;
     filter: blur(100.1875px);
   }
+  .tech{
+  border-radius: 20px;
+  border: solid rgba(99, 99, 99, 0.315) 1px;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  height: 400px;
+  padding-left:20px;
+  background: radial-gradient(rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.08) 100%);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+.tech h2{
+  font-family: Outfit;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.tech h3{
+  font-family: Outfit;
+  font-size: 20px;
+  font-weight: lighter;
+}
+  .tech span{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: Outfit;
+  color: #56C2FF;
+}
+.tech span h4{margin-left: 10px;}
+
+
   @media only screen and (max-width: 800px) {
+    .teams{
+      overflow-x: hidden;
+    }
     .team {
       margin: 0 auto;
       display: block;
@@ -128,18 +171,79 @@
 
     .bubble3 {
     right: -50px;
-    top: -100px;
     width: 200px;
+    top: 100px;
     height: 200px;
     filter: blur(60.1875px);
-
   }
+
+  
+.tech{
+  border-radius: 20px;
+  border: solid rgba(99, 99, 99, 0.315) 1px;
+  margin: 0 auto;
+  width: 95%;
+  display: block;
+  justify-content:space-between;
+  align-items: center;
+  position: relative;
+  height: fit-content;
+  padding-left:20px;
+  background: radial-gradient(rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.08) 100%);
+  backdrop-filter: blur(10px);
+  color: white;
+  margin-bottom: 50px;
+  padding: 15px;
+}
+.tech img{
+  position: absolute;
+  height: auto;
+  right: 0;
+  top: 0;
+  opacity: 0.3;
+  width: 40%;
+  z-index: -1;
+}
+.tech h2{
+  font-family: Outfit;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.tech h3{
+  font-family: Outfit;
+  font-size: 14px;
+  font-weight: 300;
+}
 
   }
 
 </style>
-<div class="team" id="team">
+<div class="teams">
+<div class="tech">
+  <div>
+    <span>
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7.625 4.625H6.125C5.72718 4.625 5.34564 4.78304 5.06434 5.06434C4.78304 5.34564 4.625 5.72718 4.625 6.125V7.625M7.625 4.625V1.625M7.625 4.625H14.375M4.625 7.625V14.375M4.625 7.625H1.625M14.375 4.625H15.875C16.2728 4.625 16.6544 4.78304 16.9357 5.06434C17.217 5.34564 17.375 5.72718 17.375 6.125V7.625M14.375 4.625V1.625M17.375 7.625H20.375M17.375 7.625V14.375M7.625 20.375V17.375M14.375 20.375V17.375M17.375 14.375V15.875C17.375 16.2728 17.217 16.6544 16.9357 16.9357C16.6544 17.217 16.2728 17.375 15.875 17.375H6.125C5.72718 17.375 5.34564 17.217 5.06434 16.9357C4.78304 16.6544 4.625 16.2728 4.625 15.875V14.375M17.375 14.375H20.375M4.625 14.375H1.625" stroke="#56C2FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>    
+    <h4>Tech Stack</h4>
+  </span>
+    <h2>Built on the Blockchain for Unmatched
+      Security & Scalability</h2>
+    <h3>With Sozo's blend of ICP and Social Scoring, we armor your NFT realm 
+      with unbreakable security and boundless scalability, empowering 
+      creators and collectors alike to conquer.
+    </h3>
+  </div>
+  <div>
+    <img src="icp.png">
+  </div>
+  </div>
   <div class="bubble3"></div>
+<div class="team" id="team">
+
+    
+
   <div class="title"><h1>Meet the team</h1></div>
   <div class="membs">
     <div class="mem">
@@ -171,4 +275,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>
