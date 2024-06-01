@@ -19,7 +19,8 @@
     font-weight: 400;
   }
 
-  .blue2, .blue4 {
+  .blue2,
+  .blue4 {
     position: absolute;
     z-index: -1;
     width: 500px;
@@ -85,15 +86,12 @@
   .question h3::after {
     content: "\002B";
     position: absolute;
-    top: 40%;
+    top: 0;
     right: 0;
-    width: 30px;
-    height: 30px;
     align-items: center;
     text-align: center;
     justify-content: center;
-    transform: translateY(-50%);
-    font-size: 30px;
+    font-size: 35px;
     color: white;
   }
 
@@ -217,15 +215,19 @@
     text-align: center; /* Optional: center the text within the h4 if needed */
   }
   @media only screen and (max-width: 800px) {
+    .question h3::after {
+      font-size: 20px;
+    }
     .contact {
       overflow-x: hidden;
     }
-    .blue2, .blue4 {
+    .blue2,
+    .blue4 {
       width: 200px;
       height: 200px;
       filter: blur(50.1875px);
     }
-    .blue4{
+    .blue4 {
       top: 20px;
     }
 
@@ -239,6 +241,8 @@
     }
     .accordion__wrapper {
       width: 85%;
+      margin: 30px auto;
+
     }
 
     .question {
