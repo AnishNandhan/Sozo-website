@@ -99,7 +99,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 400px;
+    height: fit-content;
     padding-left: 20px;
     background: radial-gradient(
       rgba(255, 255, 255, 0.03) 0%,
@@ -116,8 +116,10 @@
   }
   .tech h3 {
     font-family: Outfit;
-    font-size: 20px;
-    font-weight: lighter;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: justify;
+
   }
   .tech span {
     display: flex;
@@ -125,11 +127,18 @@
     align-items: center;
     font-family: Outfit;
     color: #56c2ff;
-  }
-  .tech span h4 {
-    margin-left: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: solid rgba(99, 99, 99, 0.315) 1px;
   }
 
+  .tech span svg {
+    width: 30px;
+  }
+  .tech span h4 {
+    font-size: 20px;
+    margin-left: 10px;
+  }
   @media only screen and (max-width: 800px) {
     .teams {
       overflow-x: hidden;
@@ -178,25 +187,15 @@
       width: 200px;
       top: 100px;
       height: 200px;
-      filter: blur(60.1875px);
+      filter: blur(80.1875px);
     }
 
     .tech {
-      border-radius: 20px;
-      border: solid rgba(99, 99, 99, 0.315) 1px;
-      margin: 0 auto;
+      border-radius: 15px;
       width: 95%;
       display: block;
-      justify-content: space-between;
-      align-items: center;
       position: relative;
       height: fit-content;
-      padding-left: 20px;
-      background: radial-gradient(
-        rgba(255, 255, 255, 0.03) 0%,
-        rgba(255, 255, 255, 0.08) 100%
-      );
-      backdrop-filter: blur(10px);
       color: white;
       margin-bottom: 50px;
       padding: 15px;
@@ -205,21 +204,34 @@
       position: absolute;
       height: auto;
       right: 0;
-      top: 0;
+      top: 50%;
+      transform: translateY(-40%);
       opacity: 0.3;
-      width: 40%;
+      width: 60%;
       z-index: -1;
     }
     .tech h2 {
       font-family: Outfit;
       font-size: 18px;
       font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
     .tech h3 {
       font-family: Outfit;
       font-size: 14px;
       font-weight: 300;
+    }
+    .tech span {
+      margin-bottom: 5px;
+    }
+    .tech span h4 {
+      margin-left: 10px;
+    }
+    .tech span svg {
+      width: 20px;
+    }
+    .tech span h4 {
+      font-size: 12px;
     }
   }
 </style>
@@ -227,13 +239,7 @@
   <div class="tech">
     <div>
       <span>
-        <svg
-          width="22"
-          height="22"
-          viewBox="0 0 22 22"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M7.625 4.625H6.125C5.72718 4.625 5.34564 4.78304 5.06434 5.06434C4.78304 5.34564 4.625 5.72718 4.625 6.125V7.625M7.625 4.625V1.625M7.625 4.625H14.375M4.625 7.625V14.375M4.625 7.625H1.625M14.375 4.625H15.875C16.2728 4.625 16.6544 4.78304 16.9357 5.06434C17.217 5.34564 17.375 5.72718 17.375 6.125V7.625M14.375 4.625V1.625M17.375 7.625H20.375M17.375 7.625V14.375M7.625 20.375V17.375M14.375 20.375V17.375M17.375 14.375V15.875C17.375 16.2728 17.217 16.6544 16.9357 16.9357C16.6544 17.217 16.2728 17.375 15.875 17.375H6.125C5.72718 17.375 5.34564 17.217 5.06434 16.9357C4.78304 16.6544 4.625 16.2728 4.625 15.875V14.375M17.375 14.375H20.375M4.625 14.375H1.625"
             stroke="#56C2FF"
@@ -262,15 +268,15 @@
       <div class="mem">
         <img src="m1.png" />
         <div class="disc">
-          <h2>Sanjeet Kotarya</h2>
-          <h4>CDO<br />DD @ IIT MADRAS</h4>
+          <h2>Anish</h2>
+          <h4>Co-founder/CTO<br />UG @ Amirta</h4>
         </div>
       </div>
       <div class="mem">
         <img src="m2.png" />
         <div class="disc">
-          <h2>Sanjeet Kotarya</h2>
-          <h4>CDO<br />DD @ IIT MADRAS</h4>
+          <h2>Harish</h2>
+          <h4>Co-founder/CEO<br />DD @ IIT Madras</h4>
         </div>
       </div>
       <div class="mem">
