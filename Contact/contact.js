@@ -80,6 +80,8 @@ fetch('Contact/contact.html')
             //         if (thankYouMessage) {
             //           thankYouMessage.style.display = "block";
             //         }
+                      // enableAllButtons(form);
+                      // alert("Response submitted");
             //       }
             //   };
             //   // url encode form data for sending as post data
