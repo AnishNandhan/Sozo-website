@@ -403,15 +403,16 @@
 
         <form
           id="contactForm"
-          action="https://script.google.com/macros/s/AKfycbz3GX5najZDO8nmIS-nh1_De_2Xgww4F63v6zgnBQAELRI84lJWjPfLoDMjVNRe9t2L/exec"
+          action="https://script.google.com/macros/s/AKfycbzKSn1DLdZMtZEnSM-H8xBFqQLqBCU2n5pjV7mqmHNK_0eNRcn_b6PyuCLxbJmNx7Cy/exec"
           method="post"
+          class="gform"
         >
           <div class="form-elements">
             <div class="form-group">
               <input
                 type="text"
-                id="name"
-                name="name"
+                id="contact-name"
+                name="contact-name"
                 placeholder="Name"
                 required
               />
@@ -419,16 +420,16 @@
             <div class="form-group">
               <input
                 type="email"
-                id="email"
-                name="email"
+                id="contact-email"
+                name="contact-email"
                 placeholder="Email"
                 required
               />
             </div>
             <div class="form-group">
               <textarea
-                id="message"
-                name="message"
+                id="contact-message"
+                name="contact-message"
                 rows="5"
                 placeholder="Message"
                 required
@@ -445,7 +446,7 @@
             </div>
 
             <div class="form-group">
-              <button type="submit" onclick="submitForm(event)">Submit</button>
+              <button type="submit">Submit</button>
             </div>
 
 

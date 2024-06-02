@@ -41,9 +41,10 @@ function openModal() {
       }
 
       form.onsubmit = function(event) {
-          event.preventDefault();
-          // Add your form submission logic here
-          alert("Form submitted!");
+        //   event.preventDefault();
+        //   // Add your form submission logic here
+        //   alert("Form submitted!");
+        handleFormSubmit(event);
           modal.style.display = "none";
       }
   } else {
@@ -51,12 +52,12 @@ function openModal() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  const openModalBtn = document.getElementById("openModalBtn");
-  if (openModalBtn) {
-      openModalBtn.onclick = openModal;
-  }
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//   const openModalBtn = document.getElementById("openModalBtn");
+//   if (openModalBtn) {
+//       openModalBtn.onclick = openModal;
+//   }
+// });
 
 
       

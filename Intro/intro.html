@@ -178,6 +178,11 @@
     height: 100%;
     object-fit: cover;
   }
+
+  .honeypot-field {
+    display: none;
+  }
+
   @media only screen and (max-width: 800px) {
     #intro {
       overflow-x: hidden;
@@ -423,22 +428,36 @@
   <div class="modal-content">
     <span class="close-btn">&times;</span>
     <h2>Join Waiting List</h2>
-    <form id="waitingListForm">
-      <input type="text" id="name" name="name" placeholder="Name" required />
+    <form 
+      id="waitingListForm" 
+      action="https://script.google.com/macros/s/AKfycbzKSn1DLdZMtZEnSM-H8xBFqQLqBCU2n5pjV7mqmHNK_0eNRcn_b6PyuCLxbJmNx7Cy/exec" 
+      method="post"
+      class="gform"
+    >
+      <input type="text" id="waitlist-name" name="waitlist-name" placeholder="Name" required />
       <input
         type="email"
-        id="email"
-        name="email"
+        id="waitlist-email"
+        name="waitlist-email"
         placeholder="Email"
         required
       />
       <textarea
-        id="message"
-        name="message"
+        id="principal"
+        name="principal"
         rows="5"
         placeholder="NFID wallet principal"
         required
       ></textarea>
+
+      <div class="form-group honeypot-field">
+        <label for="honeypot"
+          >To help avoid spam, utilize a Honeypot technique with a hidden
+          text field; must be empty to submit the form! Otherwise, we
+          assume the user is a spam bot.</label
+        >
+        <input id="honeypot" type="text" name="honeypot" value="" />
+      </div>
 
       <button type="submit">Submit</button>
     </form>
