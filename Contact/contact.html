@@ -102,7 +102,7 @@
   .sides {
     display: flex;
     width: 70%;
-    height: 500px;
+    height: fit-content;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.04);
     border: 2px solid rgba(10, 13, 23, 0.05);
@@ -114,12 +114,13 @@
   .side {
     width: 50%;
     padding: 20px;
+    height: 100%;
   }
+
   .side .imgbox {
     position: relative; /* Set position to relative to allow absolute positioning of the gradient */
-    width: 100%;
-    height: 100%;
     overflow: hidden;
+    height: 400px;
     border-radius: 12px;
   }
 
@@ -188,22 +189,22 @@
   }
   .side1 {
     text-align: left;
-    padding: 50px 40px;
+    padding: 30px;
   }
   .side1 h2 {
     font-family: Outfit;
     font-size: 30px;
     font-weight: 600;
-    line-height: 2;
+    line-height: 1;
+    border-bottom: solid royalblue 1px;
+    padding-bottom: 10px;
   }
   .side1 h3 {
     font-family: Outfit;
     font-size: 16px;
     font-weight: 400;
   }
-  #contactForm {
-    margin-top: 50px;
-  }
+
   .side .imgbox h4 {
     position: absolute;
     font-size: 20px;
@@ -215,9 +216,44 @@
     text-align: center; /* Optional: center the text within the h4 if needed */
   }
   .honeypot-field {
-  display: none;
+    display: none;
   }
+
+  .contact .social {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    align-items: center;
+  }
+  .contact .social h3 {
+    padding-right: 10px;
+    width: 50%;
+    border-right: solid #007bff 1px;
+  }
+  .contact .social a {
+    text-align: center;
+    align-items: center;
+    display: flex;
+
+  }
+  .contact .social a img {
+    cursor: pointer;
+    width: 20px;
+  }
+
   @media only screen and (max-width: 800px) {
+    .side1 h2 {
+    padding-bottom: 5px;
+  }
+    .contact .social a img {
+      width: 18px;
+    }
+    .contact .social h3 {
+      font-size: 15px;
+    }
     .question h3::after {
       font-size: 20px;
     }
@@ -245,7 +281,6 @@
     .accordion__wrapper {
       width: 85%;
       margin: 30px auto;
-
     }
 
     .question {
@@ -315,9 +350,7 @@
       font-size: 16px;
       font-weight: 200;
     }
-    #contactForm {
-      margin-top: 20px;
-    }
+
   }
 </style>
 
@@ -330,13 +363,26 @@
     </h4>
     <div class="sides">
       <div class="side side1">
-        <h2>Let's connect constellations</h2>
-        <h3>
-          Let's align our constellations! Reach out and let the magic of
-          collaboration illuminate our skies.
-        </h3>
-        <form id="contactForm" action="https://script.google.com/macros/s/AKfycbwtX-KmvLjgUPmzkMpRrnP2JlW_8XpWvlfwoCBD5tdsNYWTQuSwU6P9PGkaOx1f5qcJ/exec" method="post">
-          <div class="form-elements">          
+        <h2>Let's connect</h2>
+        <ul class="social">
+          <h3>Join our community :</h3>
+          <li>
+            <a href="#contact"><img src="w.svg" /></a>
+          </li>
+          <li>
+            <a href="#contact"><img src="x.svg" /></a>
+          </li>
+          <li>
+            <a href="#contact"><img src="l.svg" /></a>
+          </li>
+        </ul>
+
+        <form
+          id="contactForm"
+          action="https://script.google.com/macros/s/AKfycbz3GX5najZDO8nmIS-nh1_De_2Xgww4F63v6zgnBQAELRI84lJWjPfLoDMjVNRe9t2L/exec"
+          method="post"
+        >
+          <div class="form-elements">
             <div class="form-group">
               <input
                 type="text"
@@ -366,7 +412,11 @@
             </div>
 
             <div class="form-group honeypot-field">
-              <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+              <label for="honeypot"
+                >To help avoid spam, utilize a Honeypot technique with a hidden
+                text field; must be empty to submit the form! Otherwise, we
+                assume the user is a spam bot.</label
+              >
               <input id="honeypot" type="text" name="honeypot" value="" />
             </div>
 
@@ -374,12 +424,14 @@
               <button type="submit">Submit</button>
             </div>
 
-            <div class="thankyou_message" style="display:none;">
-              <h2><em>Thanks</em> for contacting us!
-                We will get back to you soon!</h2>
-          </div>
+            <div class="thankyou_message" style="display: none">
+              <h2>
+                <em>Thanks</em> for contacting us! We will get back to you soon!
+              </h2>
+            </div>
           </div>
         </form>
+
       </div>
       <div class="side side2">
         <div class="imgbox">
@@ -439,4 +491,3 @@
     </div>
   </div>
 </div>
-
