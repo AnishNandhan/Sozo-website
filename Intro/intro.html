@@ -1,5 +1,4 @@
 <style>
-
   #intro {
     width: 100%;
     height: fit-content;
@@ -7,8 +6,8 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    position:relative;
     color: white;
+    position: relative;
     z-index: 1;
   }
   #intro ul {
@@ -58,7 +57,7 @@
     text-align: center;
     color: #ffffff;
   }
-  
+
   #intro h3 {
     font-family: Outfit;
     font-style: normal;
@@ -97,7 +96,7 @@
       rgba(17, 84, 255, 0.46) 100%
     );
     filter: blur(84.1875px);
-}
+  }
 
   .bubble1 {
     z-index: -1;
@@ -123,7 +122,13 @@
     width: 200px;
     height: 200px;
     border-radius: 100%;
-    background: linear-gradient(to top, rgba(70, 43, 146, 1), rgba(110, 56, 136, 0.6), rgba(152, 73, 95, 0.6), rgba(120, 68, 54, 0.8));
+    background: linear-gradient(
+      to top,
+      rgba(70, 43, 146, 1),
+      rgba(110, 56, 136, 0.6),
+      rgba(152, 73, 95, 0.6),
+      rgba(120, 68, 54, 0.8)
+    );
     filter: blur(33.675px);
   }
 
@@ -132,10 +137,9 @@
     height: 600px;
     margin: 50px auto;
     position: relative;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50));
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     border-radius: 25px;
     overflow: hidden;
-
   }
 
   .play {
@@ -154,92 +158,229 @@
     z-index: 10;
   }
 
-.video-player {
-  width: 100%;
-  height: 100%;
-  display: none; 
-  object-fit: cover;
-}
-
-.video-playing .play,
-.video-playing .thumbnail {
-  display: none;
-}
-
-.video-playing .video-player {
-  display: block;
-}
-.thumbnail {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-@media only screen and (max-width: 800px) {
-  #intro {
-    overflow-x: hidden;
+  .video-player {
+    width: 100%;
+    height: 100%;
+    display: none;
+    object-fit: cover;
   }
-  .play {
-    position: absolute;
-    border-radius: 100%;
-    width: 80px;
-    height: 80px;
-    left: calc(50% - 80px / 2 + 0.13px);
-    align-items: center;
+
+  .video-playing .play,
+  .video-playing .thumbnail {
+    display: none;
+  }
+
+  .video-playing .video-player {
+    display: block;
+  }
+  .thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @media only screen and (max-width: 800px) {
+    #intro {
+      overflow-x: hidden;
+    }
+    .play {
+      position: absolute;
+      border-radius: 100%;
+      width: 80px;
+      height: 80px;
+      left: calc(50% - 80px / 2 + 0.13px);
+      align-items: center;
+      justify-content: center;
+      top: calc(50% - 80px / 2 + 0.13px);
+      display: flex;
+      padding: 10px 0;
+      background-color: rgba(240, 255, 255, 0.13);
+      z-index: 10;
+    }
+    .video {
+      height: 250px;
+      border-radius: 10px;
+    }
+    #intro h4 {
+      font-size: 25px;
+      margin-top: 70px;
+    }
+    #intro ul {
+      font-size: 14px;
+    }
+
+    #intro h1 {
+      font-size: 80px;
+    }
+
+    #intro h2 {
+      font-size: 30px;
+    }
+
+    #intro h3 {
+      font-size: 20px;
+      margin-top: 30px;
+      width: 80%;
+    }
+    .blue {
+      width: 250px;
+      height: 250px;
+      top: 150px;
+      left: 50%;
+      filter: blur(42.1875px);
+    }
+
+    .bubble1 {
+      top: 120px;
+      width: 150px;
+      height: 150px;
+      filter: blur(42.1875px);
+      left: 60%;
+    }
+    .bubble2 {
+      top: 280px;
+      left: 10%;
+      width: 150px;
+      height: 150px;
+      filter: blur(20.1875px);
+    }
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
-    top: calc(50% - 80px / 2 + 0.13px);
-    display: flex;
-    padding: 10px 0;
-    background-color: rgba(240, 255, 255, 0.13);
-    z-index: 10;
+    align-items: center;
+    z-index: 200;
   }
-  .video{
-    height: 250px;
+
+  .modal-content {
+    background-color: white;
+    padding: 20px;
     border-radius: 10px;
-  }
-  #intro h4 {
-    font-size: 25px;
-    margin-top: 70px;
-  }
-  #intro ul {
-    font-size: 14px;
+    width: 80%;
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
   }
 
-  #intro h1 {
-    font-size: 80px;
+  .close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
   }
 
-  #intro h2 {
+  .close-btn:hover,
+  .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+
+  /* Modal Content */
+  .modal-content {
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: fit-content;
+    border-radius: 20px;
+    color: white;
+    font-family: Outfit;
+    position: relative;
+    background: rgba(255, 255, 255, 0.04);
+    border: 2px solid rgba(10, 13, 23, 0.05);
+    backdrop-filter: blur(100px);
+  }
+  .modal-content h2 {
+    border-bottom: solid #007bff 1px;
+    padding-bottom: 10px;
     font-size: 30px;
   }
-  
-  #intro h3 {
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     font-size: 20px;
-    margin-top: 30px;
-    width: 80%;
+    cursor: pointer;
+    color: white;
   }
-  .blue {
-    width: 250px;
-    height: 250px;
-    top: 150px;
-    left: 50%;
-    filter: blur(42.1875px);
-}
 
-  .bubble1 {
-    top: 120px;
-    width: 150px;
-    height: 150px;
-    filter: blur(42.1875px);
-    left: 60%;
+  .close-btn:hover {
+    color: #999;
   }
-  .bubble2 {
-    top: 280px;
-    left: 10%;
-    width: 150px;
-    height: 150px;
-    filter: blur(20.1875px);
+
+  /* Form Styling */
+  #waitingListForm {
+    margin-top: 20px;
   }
-}
+
+  #waitingListForm input[type="text"],
+  #waitingListForm input[type="email"],
+  #waitingListForm textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: white;
+    border: 1px solid #485c89;
+    font-family: Outfit;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  #waitingListForm input[type="text"]:focus,
+  #waitingListForm input[type="email"]:focus,
+  #waitingListForm textarea:focus {
+    border-color: #007bff; /* Change this color to your desired border color */
+    outline: none; /* Optional: Remove default focus outline */
+  }
+  
+  #waitingListForm textarea {
+    resize: vertical;
+    height: 100px;
+  }
+
+  #waitingListForm button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  #waitingListForm button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .modal-content h2 {
+    font-size: 20px;
+  }
+  }
 </style>
 
 <div id="intro">
@@ -248,16 +389,15 @@
   <div class="bubble2"></div>
   <h1>SoZo</h1>
   <h2>A Social NFT Space</h2>
-  <h3>
-    Empower and earn through your NFTs with community driven engagement.
-  </h3>
+  <h3>Empower and earn through your NFTs with community driven engagement.</h3>
   <ul>
-    <li><a href="#wait">Join waitlist</a></li>
+    <li><a id="openModalBtn" onclick="openModal()">Join waitlist</a></li>
     <li><a href="#touch">Contact Us</a></li>
   </ul>
-  <h4>"Provide an open and organic way to give NFTs value"</h4>
+
+  <h4>"Provide an open and organic way for NFT valuation"</h4>
   <div class="video" id="about">
-    <div class="play"  onclick="playVideo()">
+    <div class="play" onclick="playVideo()">
       <svg
         height="40"
         viewBox="0 0 63 70"
@@ -270,12 +410,37 @@
         />
       </svg>
     </div>
-    <img class="thumbnail" src="video.png" alt="Video Thumbnail">
+    <img class="thumbnail" src="video.png" alt="Video Thumbnail" />
 
     <video class="video-player" width="600" height="400" controls>
-      <source src="blue.mp4" type="video/mp4">
+      <source src="blue.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
-  
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Join Waiting List</h2>
+    <form id="waitingListForm">
+      <input type="text" id="name" name="name" placeholder="Name" required />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email"
+        required
+      />
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        placeholder="NFID wallet principal"
+        required
+      ></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 </div>
