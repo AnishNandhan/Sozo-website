@@ -21,7 +21,6 @@ fetch('Intro/intro.html')
       }
 
 
-// Waiting list modal
 function openModal() {
   const modal = document.getElementById("modal");
   const closeBtn = document.querySelector(".close-btn");
@@ -40,24 +39,12 @@ function openModal() {
           }
       }
 
-      form.onsubmit = function(event) {
-        //   event.preventDefault();
-        //   // Add your form submission logic here
-        //   alert("Form submitted!");
-        handleFormSubmit(event);
-          modal.style.display = "none";
-      }
+      form.addEventListener("submit", (e) => {
+        form.style.display = 'none';
+        document.querySelector('.thankyou_message2').style.display = 'block';
+        handleFormSubmit(e);
+      })
   } else {
       console.error("One or more elements not found");
   }
 }
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   const openModalBtn = document.getElementById("openModalBtn");
-//   if (openModalBtn) {
-//       openModalBtn.onclick = openModal;
-//   }
-// });
-
-
-      
