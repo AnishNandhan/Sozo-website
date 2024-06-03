@@ -50,22 +50,21 @@
   color: #ffffff;
     z-index: 1;
     height: auto;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     position: relative;
     margin-top: 80px;
-}
+  }
 #how .blocks{
-  display: flex;
-  justify-content: space-between;
-}
+  display: block;
+  }
 #how .blocks .block{
   width: auto;
 }
 #how .blocks .span{
   border-radius: 20px;
   border: solid rgba(99, 99, 99, 0.315) 1px;
-  margin: 20px 0 0 20px;
+  margin: 40px 40px 0 0;
   width: 400px;
   height: 280px;
   padding:0 20px;
@@ -101,7 +100,7 @@ background: radial-gradient(127.01% 102.92% at 50% 0%, rgba(255, 255, 255, 0.03)
 
 }
 #how .blocks .block h2{
-  text-align: left;
+  text-align: center;
   font-size: 82px;
   margin-top: 50px;
   font-family: Outfit;
@@ -139,9 +138,12 @@ background: radial-gradient(127.01% 102.92% at 50% 0%, rgba(255, 255, 255, 0.03)
 
 .block2{
   display: flex; 
-  justify-content: space-evenly; 
   align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
 }
+
 .uix {
   display: none;
   }
@@ -157,6 +159,7 @@ background: radial-gradient(127.01% 102.92% at 50% 0%, rgba(255, 255, 255, 0.03)
 background: linear-gradient(180deg, #2C4982 0%, #2CD095 100%);
 filter: blur(100px);
   }
+
 
 @media only screen and (max-width: 800px) {
   .blurb {
@@ -233,15 +236,9 @@ justify-content: space-around;
   display: block;
 }
 
-#how .blocks .block2{
-  width: 100%;
-  justify-content: center;
-  margin-top: 10px;
-}
 
 #how .blocks .block2 .block{
   width: 100%;
-
 }
 #how .blocks .span{
   margin: 10px auto;
@@ -325,13 +322,14 @@ filter: blur(60px);
 </div>
 
 <div id="how">
-  <div class="green1"></div>
   <div class="blocks">
     
     <div class="block">
       <h2>How are we doing it?</h2>
     </div>
     <div class="block2">
+        <div class="green1"></div>
+
     <div class="block">
       <div class="span">
         <ul>
@@ -371,6 +369,7 @@ filter: blur(60px);
       </div>
     </div>
     </div>
+    
   </div>
 </div>
 
