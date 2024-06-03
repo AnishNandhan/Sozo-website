@@ -183,7 +183,25 @@
     display: none;
   }
 
+  .thankyou_message2{
+    display: none;
+    margin: 40px 0;
+  }
+  .thankyou_message2 h1{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+  }
+
   @media only screen and (max-width: 800px) {
+    .thankyou_message2{
+    margin: 20px 0;
+    margin-bottom: 0;
+  }
+  .thankyou_message2 h1{
+    font-size: 20px;
+    font-weight: 300;
+  }
     #intro {
       overflow-x: hidden;
     }
@@ -251,47 +269,9 @@
   }
 
   .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
-    z-index: 200;
-  }
-
-  .modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 500px;
-    margin: auto;
-    text-align: left;
-  }
-
-  .close-btn {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-  .close-btn:hover,
-  .close-btn:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  /* Modal */
-  .modal {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -302,41 +282,46 @@
     overflow: auto;
   }
 
-  /* Modal Content */
   .modal-content {
+    max-width: 500px;
+    text-align: left;
     margin: 10% auto;
     padding: 20px;
-    border: 1px solid #888;
     width: 80%;
     height: fit-content;
-    border-radius: 20px;
+    border-radius: 15px;
     color: white;
     font-family: Outfit;
     position: relative;
     background: rgba(255, 255, 255, 0.04);
     border: 2px solid rgba(10, 13, 23, 0.05);
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(150px);
   }
+
   .modal-content h2 {
-    border-bottom: solid #007bff 1px;
+    border-bottom: solid #485c89 1px;
     padding-bottom: 10px;
     font-size: 30px;
   }
-  /* Close Button */
+
   .close-btn {
+    float: right;
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 20px;
+    font-size: 25px;
     cursor: pointer;
-    color: white;
+    color:white;
+    padding:0 9px;
+    background-color:rgba(255, 0, 0, 0.5);
+
+    border-radius: 100%;
   }
 
   .close-btn:hover {
-    color: #999;
+    background-color:rgba(255, 0, 0, 0.9);
   }
 
-  /* Form Styling */
   #waitingListForm {
     margin-top: 20px;
   }
@@ -353,6 +338,7 @@
     border: 1px solid #485c89;
     font-family: Outfit;
     background: rgba(255, 255, 255, 0.05);
+    font-size: 15px;
   }
 
   #waitingListForm input[type="text"]:focus,
@@ -385,7 +371,16 @@
     .modal-content h2 {
     font-size: 20px;
   }
+  
+  .close-btn {
+    font-size: 20px;
+    padding:0 7px;
+    background: none;
   }
+
+  }
+
+
 </style>
 
 <div id="intro">
@@ -461,5 +456,10 @@
 
       <button type="submit">Submit</button>
     </form>
+    <div class="thankyou_message2">
+      <h1>
+        Thank you!<br>We will get back to you soon!
+      </h1>
+    </div>
   </div>
 </div>
