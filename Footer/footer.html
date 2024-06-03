@@ -47,19 +47,20 @@
     font-size: 20px;
     cursor: pointer;
   }
-  .social {
+.footer .social {
     display: flex;
     justify-content: space-between;
     text-decoration: none;
+    list-style: none;
   }
 
-  .social a {
+ .footer .social a {
     position: relative;
     text-align: center;
     align-items: center;
     padding: 0 20px;
   }
-  .social a img{
+  .footer.social a img{
     cursor: pointer;
     width: 25px;
   }
@@ -86,6 +87,9 @@
     height: auto;
     width: 60%;
 }
+.footer .social a img{
+    width: 22px;
+  }
 @media only screen and (max-width: 800px) {
   .footer__links{
     display: none;
@@ -97,7 +101,7 @@
     width: 100px;
     margin-right: 0;
   }
-  .social a img{
+ .footer .social a img{
     width: 18px;
   }
   .footer .content .container {
