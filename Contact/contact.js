@@ -14,6 +14,20 @@ fetch("Contact/contact.html")
     })
   });
   
+  function toggleShowMore() {
+    const hiddenQuestions = document.querySelectorAll('.hidden');
+    const showMoreBtn = document.getElementById('showMoreBtn');
+  
+    hiddenQuestions.forEach(question => {
+      if (question.style.display === "none" || question.style.display === "") {
+        question.style.display = "block";
+        showMoreBtn.textContent = "Show Less";
+      } else {
+        question.style.display = "none";
+        showMoreBtn.textContent = "Show More";
+      }
+    });
+  }
 
 function toggleAnswerVisibility(parent) {
   const answer = parent.querySelector(".answer");
@@ -27,6 +41,3 @@ function toggleAnswerVisibility(parent) {
 function toggleQuestion(questionElement) {
   questionElement.classList.toggle("open");
 }
-
-
-
