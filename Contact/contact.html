@@ -236,30 +236,32 @@
   .contact .social a {
     text-align: center;
     align-items: center;
-    display: flex;
-
+    padding: 0;
   }
-  .contact .social{
+  .contact .social {
     border-bottom: 1px solid #007bff;
     border-top: 1px solid #007bff;
     padding: 10px 0;
-
   }
   .contact .social a img {
     cursor: pointer;
     width: 20px;
   }
-  .thankyou_message{
+  .contact .social a svg {
+    cursor: pointer;
+    width: 20px;
+    fill: white;
+  }
+  .thankyou_message {
     display: none;
     margin-top: 80px;
   }
-  .thankyou_message h1{
+  .thankyou_message h1 {
     font-size: 30px;
     text-align: center;
     font-weight: 500;
   }
   @media only screen and (max-width: 800px) {
-
     .contact .social a img {
       width: 18px;
     }
@@ -364,40 +366,35 @@
       font-weight: 200;
     }
 
-    .thankyou_message{
-    margin-top: 15px;
-  }
-    .thankyou_message h1{
-    font-size: 20px;
-
-  }
+    .thankyou_message {
+      margin-top: 15px;
+    }
+    .thankyou_message h1 {
+      font-size: 20px;
+    }
   }
   .hidden {
-  display: none;
-}
+    display: none;
+  }
 
-#showMoreBtn {
-  display: block;
-  margin: 8px auto;
-  padding: 10px 20px;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 14px;
-  background-color: transparent;
-  border: solid 1px transparent;
-}
-#showMoreBtn:hover {
-  text-decoration:underline;
-}
+  #showMoreBtn {
+    display: block;
+    margin: 8px auto;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: transparent;
+    border: solid 1px transparent;
+  }
+  #showMoreBtn:hover {
+    text-decoration: underline;
+  }
 
-#showMoreBtn:active {
-  background-color: #4D16BE;
-}
-
-
-
-
+  #showMoreBtn:active {
+    background-color: #4d16be;
+  }
 </style>
 
 <div class="contact">
@@ -411,15 +408,20 @@
       <div class="side side1">
         <h2>Let's connect</h2>
         <ul class="social">
-          <h3>Join our community</h3>
+          <h3>Follow us</h3>
           <li>
-            <a href="#contact"><img src="w.svg" /></a>
+            <a href="https://www.instagram.com/sozo_icp/" target="_blank"><i class="fab fa-instagram"></i></a>
           </li>
-          <li>
-            <a href="#contact"><img src="x.svg" /></a>
+
+          <li><a href="https://www.linkedin.com/company/sozo-deso/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
           </li>
-          <li>
-            <a href="#contact"><img src="l.svg" /></a>
+
+          <li><a href="https://t.me/+WHV9dOizft8wZmI1" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+          </li>
+
+          <li><a href="https://discord.gg/HQt3mhpYZ2" target="_blank"><i class="fab fa-discord"></i></a>
+          </li>
+          <li><a href="https://twitter.com/SoZo_DeSo"><i class="fab fa-x-twitter"></i></a>
           </li>
         </ul>
 
@@ -469,21 +471,18 @@
             <div class="form-group">
               <button type="submit" onclick="submitForm(event)">Submit</button>
             </div>
-
-
           </div>
         </form>
         <div class="thankyou_message">
-          <h1>
-            Thank you for contacting us! We will get back to you soon!
-          </h1>
+          <h1>Thank you for contacting us! We will get back to you soon!</h1>
         </div>
       </div>
       <div class="side side2">
         <div class="imgbox">
           <img src="touch.png" />
           <h4>
-            "SoZo offer a gamified social NFT space for discovering NFTs based on user tastes and an informed marketplace for buying and bidding."
+            "SoZo offer a gamified social NFT space for discovering NFTs based
+            on user tastes and an informed marketplace for buying and bidding."
           </h4>
         </div>
       </div>
@@ -492,52 +491,93 @@
 
   <div id="faq">
     <div class="blue2"></div>
-  
+
     <h1>FAQs</h1>
     <h4>
       Explore our FAQs for quick answers to common queries about our platform.
     </h4>
     <div class="accordion__wrapper">
-      <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+      <div
+        class="question"
+        onclick="toggleAnswerVisibility(this);toggleQuestion(this)"
+      >
         <h3>When will SoZo launch?</h3>
         <p class="answer">SoZo is set to launch in Q3 of 2024.</p>
       </div>
-  
-      <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+
+      <div
+        class="question"
+        onclick="toggleAnswerVisibility(this);toggleQuestion(this)"
+      >
         <h3>Do I need a wallet to use SoZo?</h3>
-        <p class="answer">No, you don’t need a separate wallet. SoZo’s login method includes a built-in wallet.</p>
+        <p class="answer">
+          No, you don’t need a separate wallet. SoZo’s login method includes a
+          built-in wallet.
+        </p>
       </div>
-      <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+      <div
+        class="question"
+        onclick="toggleAnswerVisibility(this);toggleQuestion(this)"
+      >
         <h3>Do I need funds to pay for gas fees?</h3>
-        <p class="answer">No, SoZo is completely gasless due to the reverse gas model of ICP.</p>
+        <p class="answer">
+          No, SoZo is completely gasless due to the reverse gas model of ICP.
+        </p>
       </div>
-  
-      <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+
+      <div
+        class="question"
+        onclick="toggleAnswerVisibility(this);toggleQuestion(this)"
+      >
         <h3>Is SoZo a decentralized social media platform?</h3>
-        <p class="answer">Yes, SoZo is a decentralized social media platform built entirely on the Internet Computer Protocol (ICP).</p>
+        <p class="answer">
+          Yes, SoZo is a decentralized social media platform built entirely on
+          the Internet Computer Protocol (ICP).
+        </p>
       </div>
-      <div class="question hidden" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+      <div
+        class="question hidden"
+        onclick="toggleAnswerVisibility(this);toggleQuestion(this)"
+      >
         <h3>Do I need money to use SoZo?</h3>
-        <p class="answer">No, while some features involve money, using SoZo is free of cost.</p>
+        <p class="answer">
+          No, while some features involve money, using SoZo is free of cost.
+        </p>
       </div>
-      <div class="question hidden" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
-        <h3>Do I need to pay to post on SoZo like on other decentralized social media platforms?</h3>
+      <div
+        class="question hidden"
+        onclick="toggleAnswerVisibility(this);toggleQuestion(this)"
+      >
+        <h3>
+          Do I need to pay to post on SoZo like on other decentralized social
+          media platforms?
+        </h3>
         <p class="answer">No, posting on SoZo is completely free.</p>
       </div>
-      <div class="question hidden" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+      <div
+        class="question hidden"
+        onclick="toggleAnswerVisibility(this);toggleQuestion(this)"
+      >
         <h3>Can I post NFTs bought from other marketplaces?</h3>
-        <p class="answer">Yes, you can post NFTs bought from other marketplaces.</p>
+        <p class="answer">
+          Yes, you can post NFTs bought from other marketplaces.
+        </p>
       </div>
-      <div class="question hidden" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+      <div
+        class="question hidden"
+        onclick="toggleAnswerVisibility(this);toggleQuestion(this)"
+      >
         <h3>Can I post NFTs from other chains?</h3>
         <p class="answer">Not yet, but this feature is coming soon to SoZo.</p>
       </div>
-      <div class="question hidden" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+      <div
+        class="question hidden"
+        onclick="toggleAnswerVisibility(this);toggleQuestion(this)"
+      >
         <h3>Can I use internet identity to log in to SoZo?</h3>
         <p class="answer">No, we use NFID.</p>
       </div>
     </div>
     <button id="showMoreBtn" onclick="toggleShowMore()">Show More</button>
   </div>
-  
 </div>
