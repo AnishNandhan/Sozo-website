@@ -48,9 +48,10 @@
     position: relative;
   }
   .accordion__wrapper {
-    border-radius: 2.5rem;
     width: 60%;
-    margin: 50px auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
     padding: 0;
     text-align: left;
   }
@@ -263,7 +264,7 @@
       width: 18px;
     }
     .contact .social h3 {
-      font-size: 15px;
+      font-size: 14px;
     }
     .question h3::after {
       font-size: 20px;
@@ -291,7 +292,8 @@
     }
     .accordion__wrapper {
       width: 85%;
-      margin: 30px auto;
+      margin-top: 30px;
+      margin-bottom: 0;
     }
 
     .question {
@@ -370,6 +372,28 @@
 
   }
   }
+  .hidden {
+  display: none;
+}
+
+#showMoreBtn {
+  display: block;
+  margin: 8px auto;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: transparent;
+  border: solid 1px transparent;
+}
+#showMoreBtn:hover {
+  text-decoration:underline;
+}
+
+#showMoreBtn:active {
+  background-color: #4D16BE;
+}
 
 
 
@@ -468,49 +492,52 @@
 
   <div id="faq">
     <div class="blue2"></div>
-
+  
     <h1>FAQs</h1>
     <h4>
       Explore our FAQs for quick answers to common queries about our platform.
     </h4>
     <div class="accordion__wrapper">
-      <div
-        class="question"
-        onclick="toggleAnswerVisibility(this);toggleQuestion(this)"
-      >
-        <h3>How do I get started with SoZo?</h3>
-        <p class="answer">The library is open from 9 AM to 6 PM on weekdays.</p>
+      <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+        <h3>When will SoZo launch?</h3>
+        <p class="answer">SoZo is set to launch in Q3 of 2024.</p>
       </div>
-
-      <div
-        class="question"
-        onclick="toggleAnswerVisibility(this);toggleQuestion(this)"
-      >
-        <h3>What are the key features of SoZo?</h3>
-        <p class="answer">
-          You can apply for hostel accommodation through the student portal.
-        </p>
+  
+      <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+        <h3>Do I need a wallet to use SoZo?</h3>
+        <p class="answer">No, you don’t need a separate wallet. SoZo’s login method includes a built-in wallet.</p>
       </div>
-      <div
-        class="question"
-        onclick="toggleAnswerVisibility(this);toggleQuestion(this)"
-      >
-        <h3>What subscription plans does SoZo offer?</h3>
-        <p class="answer">The library is open from 9 AM to 6 PM on weekdays.</p>
+      <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+        <h3>Do I need funds to pay for gas fees?</h3>
+        <p class="answer">No, SoZo is completely gasless due to the reverse gas model of ICP.</p>
       </div>
-
-      <div
-        class="question"
-        onclick="toggleAnswerVisibility(this);toggleQuestion(this)"
-        style="border: none"
-      >
-        <h3>Can I upgrade or downgrade my subscription plan at any time?</h3>
-        <p class="answer">
-          You can apply for hostel accommodation through the student portal.
-        </p>
+  
+      <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+        <h3>Is SoZo a decentralized social media platform?</h3>
+        <p class="answer">Yes, SoZo is a decentralized social media platform built entirely on the Internet Computer Protocol (ICP).</p>
+      </div>
+      <div class="question hidden" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+        <h3>Do I need money to use SoZo?</h3>
+        <p class="answer">No, while some features involve money, using SoZo is free of cost.</p>
+      </div>
+      <div class="question hidden" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+        <h3>Do I need to pay to post on SoZo like on other decentralized social media platforms?</h3>
+        <p class="answer">No, posting on SoZo is completely free.</p>
+      </div>
+      <div class="question hidden" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+        <h3>Can I post NFTs bought from other marketplaces?</h3>
+        <p class="answer">Yes, you can post NFTs bought from other marketplaces.</p>
+      </div>
+      <div class="question hidden" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+        <h3>Can I post NFTs from other chains?</h3>
+        <p class="answer">Not yet, but this feature is coming soon to SoZo.</p>
+      </div>
+      <div class="question hidden" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+        <h3>Can I use internet identity to log in to SoZo?</h3>
+        <p class="answer">No, we use NFID.</p>
       </div>
     </div>
+    <button id="showMoreBtn" onclick="toggleShowMore()">Show More</button>
   </div>
+  
 </div>
-
-
