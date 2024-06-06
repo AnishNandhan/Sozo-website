@@ -47,23 +47,6 @@
     font-size: 20px;
     cursor: pointer;
   }
-.footer .social {
-    display: flex;
-    justify-content: space-between;
-    text-decoration: none;
-    list-style: none;
-  }
-
- .footer .social a {
-    position: relative;
-    text-align: center;
-    align-items: center;
-    padding: 0 20px;
-  }
-  .footer.social a img{
-    cursor: pointer;
-    width: 25px;
-  }
 
   .footer__title img {
     width: 160px;
@@ -87,23 +70,24 @@
     height: auto;
     width: 60%;
 }
-.footer .social a img{
-    width: 22px;
+
+
+  .footer__links a:hover {
+    text-decoration: underline;
   }
 @media only screen and (max-width: 800px) {
-  .footer__links{
-    display: none;
+  .footer__links a {
+    padding: 0 10px;
+    font-size: 14px;
   }
   .green2{
     width: 80%;
 }
 .footer__title img {
-    width: 100px;
+    width: 80px;
     margin-right: 0;
   }
- .footer .social a img{
-    width: 18px;
-  }
+
   .footer .content .container {
     padding: 10px 0;
   }
@@ -118,13 +102,7 @@
 
     <div class="content">
       <div class="container">
-        <div
-          style="
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-          "
-        >
+
           <div class="footer__title"><img src="logo.png" /></div>
           
           <ul class="footer__links">
@@ -132,12 +110,6 @@
             <li><a href="#features">Features</a></li>
             <li><a href="#proso">Vision</a></li>
           </ul>
-        </div>
-        <ul class="social">
-          <li><a href="#contact"><img src="w.svg"></a></li>
-          <li><a href="#contact"><img src="x.svg"></a></li>
-          <li><a href="#contact"><img src="l.svg"></a></li>
-        </ul>
       </div>
       
       <p class="footer__copy">@ 2024 SoZo All Rights Reserved</p>
