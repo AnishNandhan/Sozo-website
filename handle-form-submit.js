@@ -41,7 +41,6 @@
 
     formData.formDataNameOrder = JSON.stringify(fields);
     formData.formGoogleSheetName = form.dataset.sheet || form.id;
-    console.log(formData.formGoogleSheetName);
     formData.formGoogleSendEmail = form.dataset.email || "";
 
     return { data: formData, honeypot: honeypot };
@@ -52,7 +51,6 @@
     var form = event.target;
     var formData = getFormData(form);
     var data = formData.data;
-    console.log(data)
 
     if (formData.honeypot) {
       return false;
