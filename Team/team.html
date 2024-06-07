@@ -92,7 +92,7 @@
   .tech {
     border-radius: 20px;
     border: solid rgba(99, 99, 99, 0.315) 1px;
-    margin: 80px auto;
+    margin: 100px auto;
     width: 90%;
     display: flex;
     justify-content: space-between;
@@ -117,7 +117,6 @@
     font-size: 24px;
     font-weight: 300;
     text-align: justify;
-
   }
   .tech span {
     display: flex;
@@ -136,6 +135,27 @@
   .tech span h4 {
     font-size: 20px;
     margin-left: 10px;
+  }
+
+  .backed {
+    width: 90%;
+    margin: 100px auto;
+  }
+  .backed h1 {
+    color: white;
+    font-size: 78px;
+    font-family: Outfit;
+    text-align: center;
+  }
+  .backed .brands {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .backed img {
+    width: 30%;
+    height: auto;
   }
   @media only screen and (max-width: 800px) {
     .teams {
@@ -192,11 +212,11 @@
       width: 95%;
       display: block;
       position: relative;
-      height: fit-content;
       color: white;
-      margin-bottom: 50px;
       padding: 15px;
+      margin: 40px auto;
     }
+
     .tech img {
       position: absolute;
       height: auto;
@@ -230,6 +250,28 @@
     .tech span h4 {
       font-size: 12px;
     }
+
+    .backed {
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+    .backed h1 {
+      color: white;
+      font-size: 30px;
+      font-family: Outfit;
+      text-align: center;
+    }
+    .backed .brands {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .backed img {
+      width: 40%;
+      height: auto;
+    }
   }
 </style>
 <div class="teams">
@@ -251,14 +293,16 @@
       <h3>
         With Sozo's blend of ICP and Social Scoring, we armor your NFT realm
         with unbreakable security and boundless scalability, empowering creators
-        and collectors alike to conquer.<br>Low latency and high throughput of the World Computer enables web-2
-        like performance which is not found in contemporary dApps(on ethereum).
+        and collectors alike to conquer.<br />Low latency and high throughput of
+        the World Computer enables web-2 like performance which is not found in
+        contemporary dApps(on ethereum).
       </h3>
     </div>
     <div>
       <img src="imgs/icp.png" />
     </div>
   </div>
+
   <div class="bubble3"></div>
   <div class="team" id="team">
     <div class="title"><h1>Meet the team</h1></div>
@@ -291,6 +335,14 @@
           <h4>Graphic Designer<br />UG @ Amirta</h4>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="backed">
+    <h1>We are backed by</h1>
+    <div class="brands">
+      <img src="imgs/icpd.png" alt="ICP" />
+      <img src="imgs/icph.png" alt="ICP India hub" />
     </div>
   </div>
 </div>
